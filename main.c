@@ -7,17 +7,6 @@
 *
 */
 
-#include <arpa/inet.h>
-#include <sys/socket.h>
-#include <sys/stat.h>
-#include <netinet/in.h>
-#include <unistd.h>
-#include <fcntl.h>
-#include <string.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <errno.h>
-#include <signal.h>
 
 
 #include "file.h"
@@ -43,11 +32,11 @@ int main(int argc, char *argv[]) {
 
   ConfigT1 configT1 = FILE_read_configT1(file_name);
 
-  //comprobo que hagi llegit be!!! 
-  write(1,configT1.telescope, sizeof(configT1.telescope));
-  write(1,configT1.ip, sizeof(configT1.ip));
+  //comprobo que hagi llegit be!!!
+  printf("\n%s\n", configT1.telescope);
   printf("\n%d\n",configT1.wait_time);
-  printf("%d\n",configT1.port);
+  printf("\n%s\n", configT1.ip);
+  printf("\n%d\n",configT1.port);
 
 
 
