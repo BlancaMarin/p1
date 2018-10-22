@@ -1,15 +1,28 @@
 #include "file.h"
 
 char* read_string(int fd, char end) {
-    char* buffer = (char *) malloc(1);
+    char* buffer = malloc(sizeof(char));
     int i = 0;
 
     while ((read(fd, &buffer[i], 1)) > 0 && buffer[i++] != end){
         buffer = (char *) realloc(buffer, i + 1);
 
     }
+    /*
+    char aux;
+    int i=0;
+     read(fd, &aux, 1);
+     buffer = (char *)malloc(sizeof(char));
+     while(aux != '\n'){
+       buffer[i]=aux;
+       i++;
+       buffer = (char *) realloc(buffer, sizeof(char)*(i+1));
 
-    //buffer[i - 1] = '\0';
+       read(fd, &aux,1);
+     }
+     read(fd, &aux,1);
+     //buffer = (char *) realloc(buffer, i+1);*/
+    //buffer[i] = '\0';
     return buffer;
 }
 
@@ -36,6 +49,7 @@ ConfigT1 FILE_read_configT1(char *file_name) {
     //llegeixo temps espera (faig atoi)
     aux = read_string(fd, '\n');
     configT1.wait_time = atoi(aux);
+    //printf("\n%d: wait_time\n", configT1.wait_time);
     //legeixo ip
     configT1.ip = read_string(fd,'\n');
     //llegeixo port (faig atoi)
