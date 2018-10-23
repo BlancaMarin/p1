@@ -12,6 +12,11 @@
 #include <stdlib.h>
 #include <errno.h>
 #include <signal.h>
+#include <signal.h>
+#include <stdlib.h>
+#include <stdio.h>
+#include <sys/types.h>
+#include <dirent.h>
 
 typedef struct {
     char* telescope;
