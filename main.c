@@ -37,11 +37,11 @@ int main(int argc, char *argv[]) {
   ConfigT1 configT1 = FILE_read_configT1(file_name);
 
   char aux[100];
-  sprintf(aux, "Starting %s\n", configT1.name);
+  sprintf(aux, "Starting %s", configT1.telescope);
   write(1, aux, strlen(aux));
 
-  write(1, MSG_WAIT, sizeof(MSG_WAIT);
-  write(1, MSG_TESTING, sizeof(MSG_TESTING);
+  write(1, MSG_WAIT, sizeof(MSG_WAIT));
+  write(1, MSG_TESTING, sizeof(MSG_TESTING));
 
 
   ok = Arxius_read_arxius(configT1);
