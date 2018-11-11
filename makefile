@@ -12,7 +12,7 @@ main.o: main.c types.h arxius.h file.h
 
 
 p1: file.o arxius.o main.o
-	gcc file.o arxius.o main.o -o p1
+	gcc file.o arxius.o main.o -o McGruder
 
 clean:
 	rm -f *.o p1

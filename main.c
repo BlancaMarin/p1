@@ -20,7 +20,6 @@
 //missatges d'error
 #define MSG_ERR_NUM_ARGS        "Número d'arguments incorrecte.\n"
 #define MSG_ERR_READ            "No s'ha trobat directori files.\n "
-#define MSG_WAIT                "Waiting...\n"
 #define MSG_TESTING             "Testing files...\n"
 
 
@@ -28,6 +27,8 @@
 
 int main(int argc, char *argv[]) {
   int ok = 0;
+  char aux[100];
+  
   if (argc != NUM_ARGS){
         write(2, MSG_ERR_NUM_ARGS, sizeof(MSG_ERR_NUM_ARGS));
         return EXIT_FAILURE;
@@ -36,11 +37,9 @@ int main(int argc, char *argv[]) {
 
   ConfigT1 configT1 = FILE_read_configT1(file_name);
 
-  char aux[100];
-  sprintf(aux, "Starting %s", configT1.telescope);
-  write(1, aux, strlen(aux));
 
-  write(1, MSG_WAIT, sizeof(MSG_WAIT));
+  sprintf(aux, "Starting %s.\n", configT1.telescope);
+  write(1, aux, strlen(aux));
   write(1, MSG_TESTING, sizeof(MSG_TESTING));
 
 

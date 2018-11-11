@@ -8,21 +8,6 @@ char* read_string(int fd, char end) {
         buffer = (char *) realloc(buffer, i + 1);
 
     }
-    /*
-    char aux;
-    int i=0;
-     read(fd, &aux, 1);
-     buffer = (char *)malloc(sizeof(char));
-     while(aux != '\n'){
-       buffer[i]=aux;
-       i++;
-       buffer = (char *) realloc(buffer, sizeof(char)*(i+1));
-
-       read(fd, &aux,1);
-     }
-     read(fd, &aux,1);
-     //buffer = (char *) realloc(buffer, i+1);*/
-    //buffer[i] = '\0';
     return buffer;
 }
 
