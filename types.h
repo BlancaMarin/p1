@@ -12,6 +12,8 @@
 #include <stdlib.h>
 #include <errno.h>
 #include <signal.h>
+#include <dirent.h>
+
 
 typedef struct {
     char* telescope;
@@ -19,5 +21,12 @@ typedef struct {
     char* ip;
     int  port;
 } ConfigT1;
+
+typedef struct {
+    char* type;
+    char*  header;
+    int lenght;
+    char*  data;
+} McGruder_Lionel;
 
 #endif

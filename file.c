@@ -40,6 +40,7 @@ ConfigT1 FILE_read_configT1(char *file_name) {
     //llegeixo port (faig atoi)
     aux = read_string(fd, '\n');
     configT1.port = atoi(aux);
+    printf("%d\n", configT1.port);
     close(fd);
   }
 

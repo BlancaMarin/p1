@@ -5,6 +5,7 @@
 #define MSG_NOT_FOUND           "No files found.\n"
 
 
+
 void enviar_arxiu (char* name){
   //enviare archiu
   char aux[300];
@@ -27,6 +28,7 @@ int Arxius_read_arxius (ConfigT1 configT1){
   if (dir == NULL){
     return -1;
   }
+
 
   write(1, MSG_WAIT, sizeof(MSG_WAIT));
   //Una vez nos aseguramos de que no hay error
