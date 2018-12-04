@@ -4,6 +4,6 @@
 #include "types.h"
 
 int Arxius_read_arxius();
-void Arxius_llegir_contingut ();
+void Arxius_llegir_contingut();
 
 #endif
