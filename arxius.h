@@ -3,6 +3,7 @@
 
 #include "types.h"
 
-int Arxius_read_arxius(ConfigT1 configT1);
+int Arxius_read_arxius();
+void Arxius_llegir_contingut ();
 
 #endif
